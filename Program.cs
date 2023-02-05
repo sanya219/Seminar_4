@@ -21,16 +21,13 @@ int Factorial(int number)
     int result = 1;
     /* for(int i = 1; i <= number; i++)
         result *= i; */
-        
+
     while(number > 1)
-    {
-        result *= number;
-        number--;
-    }
+        result *= number--;
 
     return result;
 }
 
 Console.Write("Enter number N: ");
-int numN = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Factorial is: " + Factorial(numN));
+//int numN = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Factorial is: " + Factorial(Convert.ToInt32(Console.ReadLine())));
